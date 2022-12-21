@@ -36,18 +36,25 @@
 }
 
 .input {
+  border: 1px solid gray;
   width: 800px;
-  height: 35px;
+  height: 45px;
   margin-bottom: 50px;
+  font-size: 16px;
+  border-radius: 4px;
+}
+.input:focus {
+  outline: none;
 }
 
 .btn-add {
   border: none;
   background-color: rgba(2, 112, 190, 0.874);
   color: #fff;
-  padding: 9.5px 20px;
-  border-radius: 0 4px 4px 0;
+  padding: 14px 30px;
+  border-radius: 4px;
   cursor: pointer;
+  margin-left: 3px;
 }
 
 .btn-add:hover {
@@ -58,13 +65,15 @@
 
 .task-container {
   width: 1000px;
-  height: 30px;
+  height: 45px;
   margin: 0 auto;
   justify-content: space-between;
   background-color: rgb(67, 67, 144);
   color: #fff;
   margin-bottom: 1px;
   padding: 5px;
+  border-radius: 4px;
+  font-size: 18px;
 }
 
 .task-radio-container {
@@ -72,5 +81,33 @@
 }
 
 .btn-delete {
+  border: none;
   margin-left: 5px;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: rgba(242, 94, 78, 0.869);
+}
+
+.btn-delete:hover {
+  background-color: rgb(242, 95, 78);
+}
+
+.btn-edit {
+  border: none;
+  margin-left: 5px;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: rgba(34, 202, 143, 0.833);
+}
+
+.btn-edit:hover {
+  background-color: rgb(34, 202, 143);
+}
+
+.check {
+  width: 30px;
 }

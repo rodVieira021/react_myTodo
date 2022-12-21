@@ -11,12 +11,14 @@ const taskSlice = createSlice({
       state.allTasks.push(action.payload);
     },
     editTask: (state, action) => {},
-    completeTask: (state, action) => {},
-    deleteTask: (state, action) => {},
+    deleteTask: (state, action) => {
+      state.allTasks = state.allTasks.filter((task) => {
+        return task.id !== action.payload;
+      });
+    },
   },
 });
 
 export default taskSlice.reducer;
-export const { addTask, editTask, completeTask, deleteTask } =
-  taskSlice.actions;
 export const taskArr = (state) => state.task.allTasks;
+export const { addTask, editTask, deleteTask } = taskSlice.actions;
