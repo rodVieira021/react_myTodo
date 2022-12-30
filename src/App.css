@@ -70,7 +70,7 @@
   justify-content: space-between;
   background-color: rgb(67, 67, 144);
   color: #fff;
-  margin-bottom: 1px;
+  margin-bottom: 2px;
   padding: 5px;
   border-radius: 4px;
   font-size: 18px;
@@ -79,6 +79,7 @@
 .task-radio-container {
   gap: 10px;
 }
+
 
 .btn-delete {
   border: none;
