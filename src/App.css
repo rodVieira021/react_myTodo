@@ -7,6 +7,11 @@
   font-family: "Ubuntu", sans-serif;
 }
 
+.grid {
+  display: grid;
+  justify-items: center;
+}
+
 .flex {
   display: flex;
 }
@@ -29,24 +34,54 @@
   text-align: center;
 }
 
+.input-container {
+  justify-items: start;
+  background-color: rgba(255, 255, 255, 0.802);
+  padding: 100px 10px 20px 10px;
+  border-radius: 4px 4px 0 0;
+  grid-template-columns: 1fr, 1fr;
+}
+
 .header {
   font-size: 48px;
   margin-bottom: 50px;
   padding-top: 50px;
 }
 
-.input {
+.input-title {
   border: 1px solid gray;
-  width: 800px;
-  height: 45px;
-  margin-bottom: 50px;
+  width: 500px;
+  height: 35px;
+  margin-bottom: 10px;
   font-size: 16px;
   border-radius: 4px;
 }
-.input:focus {
+
+.input-task {
+  border: 1px solid gray;
+  width: 800px;
+  height: 45px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+}
+.input-task:focus,
+.input-title:focus {
   outline: none;
 }
 
+.input-date {
+  border: 1px solid gray;
+  margin: 0 0 30px 10px;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+.input-title,
+.input-task,
+.input-date {
+  justify-self: center;
+}
 .btn-add {
   border: none;
   background-color: rgba(2, 112, 190, 0.874);
@@ -55,6 +90,7 @@
   border-radius: 4px;
   cursor: pointer;
   margin-left: 3px;
+  justify-self: center;
 }
 
 .btn-add:hover {
@@ -64,15 +100,14 @@
 /* TASKS */
 
 .task-container {
-  width: 1000px;
-  height: 45px;
+  width: 1200px;
   margin: 0 auto;
   justify-content: space-between;
   background-color: rgb(67, 67, 144);
   color: #fff;
   margin-bottom: 2px;
   padding: 5px;
-  border-radius: 4px;
+
   font-size: 18px;
 }
 
@@ -80,6 +115,13 @@
   gap: 10px;
 }
 
+.btn-task-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  justify-items: end;
+  align-items: end;
+}
 
 .btn-delete {
   border: none;
@@ -89,6 +131,8 @@
   border-radius: 4px;
   cursor: pointer;
   background-color: rgba(242, 94, 78, 0.869);
+  align-self: flex-end;
+  grid-row: 3;
 }
 
 .btn-delete:hover {
@@ -103,6 +147,7 @@
   border-radius: 4px;
   cursor: pointer;
   background-color: rgba(34, 202, 143, 0.833);
+  grid-row: -2;
 }
 
 .btn-edit:hover {
@@ -110,5 +155,16 @@
 }
 
 .check {
-  width: 30px;
+  align-self: flex-start;
+  width: 20px;
+  height: 20px;
+}
+
+.t-title,
+.t-task {
+  margin-bottom: 20px;
+}
+
+.t-title {
+  font-size: 20px;
 }

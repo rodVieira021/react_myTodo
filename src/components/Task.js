@@ -2,12 +2,23 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { deleteTask } from "../features/taskSlice";
 
-const Task = ({ task, index, taskInput, setTaskInput }) => {
+const Task = ({
+  task,
+  index,
+  taskTitle,
+  setTaskTitle,
+  taskInput,
+  setTaskInput,
+  taskDate,
+  setTaskDate,
+}) => {
   const dispatch = useDispatch();
   const [checkbox, setCheckBox] = useState(false);
 
   const editTaskNew = () => {
+    setTaskTitle(task.title);
     setTaskInput(task.task);
+    setTaskDate(task.date);
     dispatch(deleteTask(task.id));
   };
 
@@ -27,7 +38,13 @@ const Task = ({ task, index, taskInput, setTaskInput }) => {
             color: checkbox ? "rgba(191, 178, 178, 0.752)" : "",
           }}
         >
-          {task.task}
+          {
+            <div className="task-div">
+              <h2 className="t-title">{task.title.toUpperCase()}</h2>
+              <p className="t-task">{task.task} </p>
+              <p className="t-date">Deadline: {task.date}</p>
+            </div>
+          }
         </p>
       </div>
       <div className="btn-task-container">
