@@ -37,34 +37,30 @@ const Main = () => {
             addTaskReset();
           }}
         >
-          <label>
-            {"Task title: "}
-            <input
-              className="input-title"
-              type="text"
-              value={taskTitle}
-              onChange={(a) => setTaskTitle(a.target.value)}
-            />
-          </label>
-          <label>
-            {"Task description: "}
-            <input
-              className="input-task"
-              type="text"
-              placeholder=""
-              value={taskInput}
-              onChange={(b) => setTaskInput(b.target.value)}
-            />
-          </label>
-          <label>
-            {"Deadline: "}
-            <input
-              className="input-date"
-              type="date"
-              value={taskDate}
-              onChange={(c) => setTaskDate(c.target.value)}
-            />
-          </label>
+          <label>Task title:</label>
+          <input
+            className="input-title"
+            type="text"
+            value={taskTitle}
+            onChange={(a) => setTaskTitle(a.target.value)}
+          />
+
+          <label> Task description:</label>
+          <input
+            className="input-task"
+            type="text"
+            value={taskInput}
+            onChange={(b) => setTaskInput(b.target.value)}
+          />
+
+          <label>Deadline: </label>
+          <input
+            className="input-date"
+            type="date"
+            value={taskDate}
+            onChange={(c) => setTaskDate(c.target.value)}
+          />
+
           <button className="btn-add" type="submit">
             Add Task
           </button>
