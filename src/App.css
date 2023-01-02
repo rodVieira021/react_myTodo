@@ -25,6 +25,7 @@
 }
 .App {
   height: 100vh;
+  overflow: hidden;
   background-color: rgba(128, 128, 128, 0.13);
 }
 
@@ -176,4 +177,273 @@ label {
 
 .t-title {
   font-size: 20px;
+}
+
+/* MEDIAS */
+
+@media (max-width: 1250px) {
+  .container {
+    width: 1000px;
+  }
+  .input-container {
+    padding: 10px;
+
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: repeat(4, 50px);
+  }
+
+  .input-title,
+  .input-task {
+    width: 700px;
+  }
+
+  label {
+    font-size: 16px;
+  }
+
+  .btn-add {
+    padding: 14px 30px;
+    font-size: 16px;
+  }
+
+  .header {
+    font-size: 34px;
+  }
+
+  .btn-add {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  .task-container {
+    width: 1000px;
+    font-size: 16px;
+  }
+
+  .task-container {
+    width: 1000px;
+    font-size: 16px;
+  }
+  .btn-edit {
+    grid-row: 2;
+    grid-column: 2;
+    justify-self: start;
+  }
+
+  .btn-delete {
+    grid-row: 3;
+    grid-column: 2;
+    margin-top: 5px;
+  }
+}
+
+@media (max-width: 990px) {
+  .container {
+    width: 800px;
+  }
+  .input-container {
+    padding: 10px;
+
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: repeat(4, 50px);
+  }
+
+  .input-title,
+  .input-task {
+    width: 500px;
+  }
+
+  label {
+    font-size: 16px;
+  }
+
+  .btn-add {
+    padding: 14px 30px;
+    font-size: 16px;
+  }
+
+  .header {
+    font-size: 34px;
+  }
+
+  .btn-add {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  .task-container {
+    width: 800px;
+    font-size: 16px;
+  }
+
+  .task-container {
+    width: 800px;
+    font-size: 16px;
+  }
+  .btn-edit {
+    grid-row: 2;
+    grid-column: 2;
+    justify-self: start;
+  }
+
+  .btn-delete {
+    grid-row: 3;
+    grid-column: 2;
+    margin-top: 5px;
+  }
+}
+
+@media (max-width: 770px) {
+  .container {
+    width: 600px;
+  }
+  .input-container {
+    padding: 10px;
+
+    grid-template-columns: 150px 1fr;
+    grid-template-rows: repeat(4, 50px);
+  }
+
+  .input-title,
+  .input-task {
+    width: 400px;
+  }
+
+  label {
+    font-size: 16px;
+  }
+
+  .btn-add {
+    padding: 14px 30px;
+    font-size: 16px;
+  }
+
+  .header {
+    font-size: 28px;
+  }
+
+  .btn-add {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  .task-container {
+    width: 600px;
+    font-size: 16px;
+  }
+  .btn-edit {
+    grid-row: 2;
+    grid-column: 2;
+    justify-self: start;
+  }
+
+  .btn-delete {
+    grid-row: 3;
+    grid-column: 2;
+    margin-top: 5px;
+  }
+}
+
+@media (max-width: 460px) {
+  .container {
+    width: 460px;
+  }
+  .input-container {
+    padding: 0;
+    grid-template-columns: 120px 1fr;
+    grid-template-rows: repeat(4, 50px);
+  }
+
+  .input-title,
+  .input-task {
+    width: 320px;
+  }
+
+  label {
+    font-size: 14px;
+  }
+
+  .btn-add {
+    padding: 7px 16px;
+    font-size: 16px;
+  }
+
+  .header {
+    font-size: 28px;
+  }
+
+  .task-container {
+    width: 460px;
+    font-size: 16px;
+  }
+  .btn-edit {
+    grid-row: 2;
+    grid-column: 2;
+    justify-self: start;
+  }
+
+  .btn-delete {
+    grid-row: 3;
+    grid-column: 2;
+    margin-top: 5px;
+  }
+}
+
+@media (max-width: 350px) {
+  .container {
+    width: 300px;
+  }
+  .input-container {
+    padding: 5px;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: repeat(4, 50px);
+  }
+
+  .input-title,
+  .input-task {
+    width: 180px;
+  }
+
+  label {
+    font-size: 10px;
+  }
+
+  .btn-add {
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+
+  .header {
+    font-size: 28px;
+  }
+
+  .App {
+    overflow: hidden;
+  }
+
+  .task-container {
+    width: 300px;
+    font-size: 14px;
+  }
+  .btn-edit {
+    grid-row: 2;
+    grid-column: 2;
+    justify-self: start;
+    padding: 8px 16px;
+  }
+
+  .btn-delete {
+    grid-row: 3;
+    grid-column: 2;
+    margin-top: 5px;
+    padding: 8px 16px;
+  }
+
+  .t-title,
+  .t-task {
+    margin-bottom: 5px;
+  }
+  .t-title {
+    font-size: 20px;
+  }
 }
