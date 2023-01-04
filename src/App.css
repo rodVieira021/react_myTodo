@@ -30,7 +30,7 @@
 }
 
 .container {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
   text-align: center;
 }
@@ -51,8 +51,7 @@
 
 .header {
   font-size: 48px;
-  margin-bottom: 50px;
-  padding-top: 50px;
+  margin: 30px 0 20px 0;
 }
 
 label {
@@ -66,7 +65,7 @@ label {
 
 .input-title {
   border: 1px solid gray;
-  width: 500px;
+  width: 90%;
   height: 35px;
   font-size: 16px;
   border-radius: 4px;
@@ -74,7 +73,7 @@ label {
 
 .input-task {
   border: 1px solid gray;
-  width: 800px;
+  width: 90%;
   height: 45px;
   font-size: 16px;
   border-radius: 4px;
@@ -110,7 +109,7 @@ label {
 /* TASKS */
 
 .task-container {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
   justify-content: space-between;
   background-color: rgb(52, 82, 104);
@@ -182,19 +181,10 @@ label {
 /* MEDIAS */
 
 @media (max-width: 1250px) {
-  .container {
-    width: 1000px;
-  }
   .input-container {
     padding: 10px;
-
     grid-template-columns: 200px 1fr;
     grid-template-rows: repeat(4, 50px);
-  }
-
-  .input-title,
-  .input-task {
-    width: 700px;
   }
 
   label {
@@ -216,12 +206,10 @@ label {
   }
 
   .task-container {
-    width: 1000px;
     font-size: 16px;
   }
 
   .task-container {
-    width: 1000px;
     font-size: 16px;
   }
   .btn-edit {
@@ -238,19 +226,11 @@ label {
 }
 
 @media (max-width: 990px) {
-  .container {
-    width: 800px;
-  }
   .input-container {
     padding: 10px;
 
     grid-template-columns: 200px 1fr;
     grid-template-rows: repeat(4, 50px);
-  }
-
-  .input-title,
-  .input-task {
-    width: 500px;
   }
 
   label {
@@ -272,12 +252,10 @@ label {
   }
 
   .task-container {
-    width: 800px;
     font-size: 16px;
   }
 
   .task-container {
-    width: 800px;
     font-size: 16px;
   }
   .btn-edit {
@@ -294,19 +272,11 @@ label {
 }
 
 @media (max-width: 770px) {
-  .container {
-    width: 600px;
-  }
   .input-container {
     padding: 10px;
 
     grid-template-columns: 150px 1fr;
     grid-template-rows: repeat(4, 50px);
-  }
-
-  .input-title,
-  .input-task {
-    width: 400px;
   }
 
   label {
@@ -328,7 +298,6 @@ label {
   }
 
   .task-container {
-    width: 600px;
     font-size: 16px;
   }
   .btn-edit {
@@ -344,19 +313,11 @@ label {
   }
 }
 
-@media (max-width: 460px) {
-  .container {
-    width: 460px;
-  }
+@media (max-width: 570px) {
   .input-container {
     padding: 0;
     grid-template-columns: 120px 1fr;
     grid-template-rows: repeat(4, 50px);
-  }
-
-  .input-title,
-  .input-task {
-    width: 320px;
   }
 
   label {
@@ -373,7 +334,6 @@ label {
   }
 
   .task-container {
-    width: 460px;
     font-size: 16px;
   }
   .btn-edit {
@@ -389,19 +349,11 @@ label {
   }
 }
 
-@media (max-width: 350px) {
-  .container {
-    width: 300px;
-  }
+@media (max-width: 445px) {
   .input-container {
     padding: 5px;
     grid-template-columns: 100px 1fr;
     grid-template-rows: repeat(4, 50px);
-  }
-
-  .input-title,
-  .input-task {
-    width: 180px;
   }
 
   label {
@@ -422,7 +374,6 @@ label {
   }
 
   .task-container {
-    width: 300px;
     font-size: 14px;
   }
   .btn-edit {

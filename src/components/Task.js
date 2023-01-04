@@ -31,7 +31,7 @@ const Task = ({
           defaultChecked={checkbox}
           onChange={() => setCheckBox(!checkbox)}
         />
-        <p
+        <div
           className="p-task"
           style={{
             textDecorationLine: checkbox ? "line-through" : "",
@@ -45,7 +45,7 @@ const Task = ({
               <p className="t-date">Deadline: {task.date}</p>
             </div>
           }
-        </p>
+        </div>
       </div>
       <div className="btn-task-container">
         <button className="btn-edit" onClick={() => editTaskNew()}>

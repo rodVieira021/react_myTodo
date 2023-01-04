@@ -11,21 +11,26 @@ const Main = () => {
   const [taskTitle, setTaskTitle] = useState("");
   const [taskInput, setTaskInput] = useState("");
   const [taskDate, setTaskDate] = useState("");
-  console.log(taskTitle);
+
   const addTaskReset = (e) => {
-    dispatch(
-      addTask({
-        id: tasks.length + 1,
-        title: taskTitle,
-        task: taskInput,
-        date: taskDate,
-      })
-    );
+    const Obj = {
+      id: tasks.length + 1,
+      title: taskTitle,
+      task: taskInput,
+      date: taskDate,
+    };
+    dispatch(addTask(Obj));
+    localStorage.setItem("tasks", JSON.stringify([...tasks, Obj]));
     setTaskTitle(" ");
     setTaskInput(" ");
     setTaskDate(" ");
   };
+  const current = new Date();
+  const today = `${current.getDate()}/${
+    current.getMonth() + 1
+  }/${current.getFullYear()}`;
 
+  console.log(today)
   return (
     <div>
       <div className="container">
@@ -53,7 +58,10 @@ const Main = () => {
             onChange={(b) => setTaskInput(b.target.value)}
           />
 
-          <label>Deadline: </label>
+          <label> Today's date: </label>
+          <p>{today}</p>
+
+          <label> Deadline: </label>
           <input
             className="input-date"
             type="date"
