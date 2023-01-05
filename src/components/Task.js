@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { deleteTask } from "../features/taskSlice";
 
@@ -11,6 +11,7 @@ const Task = ({
   setTaskInput,
   taskDate,
   setTaskDate,
+  tasks,
 }) => {
   const dispatch = useDispatch();
   const [checkbox, setCheckBox] = useState(false);
@@ -21,6 +22,9 @@ const Task = ({
     setTaskDate(task.date);
     dispatch(deleteTask(task.id));
   };
+
+  
+ 
 
   return (
     <div key={index} className="task-container flex aic">
@@ -40,7 +44,7 @@ const Task = ({
         >
           {
             <div className="task-div">
-              <h2 className="t-title">{task.title.toUpperCase()}</h2>
+              <h2 className="t-title">{task.title}</h2>
               <p className="t-task">{task.task} </p>
               <p className="t-date">Deadline: {task.date}</p>
             </div>
