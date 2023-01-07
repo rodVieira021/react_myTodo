@@ -11,13 +11,17 @@ const taskSlice = createSlice({
       state.allTasks.push(action.payload);
     },
     deleteTask: (state, action) => {
+
       state.allTasks = state.allTasks.filter((task) => {
         return task.id !== action.payload;
       });
+    },
+    loadTask: (state, action) => {
+      state.allTasks = JSON.parse(localStorage.getItem("tasks"));
     },
   },
 });
 
 export default taskSlice.reducer;
 export const taskArr = (state) => state.task.allTasks;
-export const { addTask, deleteTask } = taskSlice.actions;
+export const { addTask, deleteTask, loadTask } = taskSlice.actions;

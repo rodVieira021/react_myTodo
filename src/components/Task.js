@@ -23,9 +23,6 @@ const Task = ({
     dispatch(deleteTask(task.id));
   };
 
-  
- 
-
   return (
     <div key={index} className="task-container flex aic">
       <div className=" task-radio-container flex">
@@ -46,7 +43,14 @@ const Task = ({
             <div className="task-div">
               <h2 className="t-title">{task.title}</h2>
               <p className="t-task">{task.task} </p>
-              <p className="t-date">Deadline: {task.date}</p>
+              <p className="t-date">
+                Due in:{" "}
+                {Math.ceil((task.date - new Date()) / 1000 / 60 / 60 / 24)}{" "}
+                day(s) left
+                
+
+
+              </p>
             </div>
           }
         </div>
