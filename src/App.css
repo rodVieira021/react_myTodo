@@ -87,6 +87,8 @@ label {
   border: 1px solid gray;
   font-size: 16px;
   border-radius: 4px;
+  width: 90%;
+  height: 35px;
 }
 
 .btn-add {

@@ -12,16 +12,14 @@ const Main = () => {
   const [taskInput, setTaskInput] = useState("");
   const [taskDate, setTaskDate] = useState("");
 
-
   const submitHandler = (e) => {
     e.preventDefault();
-
 
     let dueDate = new Date(taskDate);
 
     const taskObj = {
       id: tasks.length + 1,
-      title: taskTitle,
+      title: taskTitle.toUpperCase(),
       task: taskInput,
       date: dueDate,
     };
@@ -35,10 +33,8 @@ const Main = () => {
   useEffect(() => {
     if (localStorage.getItem("tasks")) {
       dispatch(loadTask());
-    } 
+    }
   }, []);
-
-
 
   return (
     <div>
@@ -63,9 +59,6 @@ const Main = () => {
             value={taskInput}
             onChange={(b) => setTaskInput(b.target.value)}
           />
-
-          <p> Today's date: </p>
-          <p></p>
 
           <label> Deadline: </label>
           <input
