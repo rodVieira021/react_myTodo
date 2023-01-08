@@ -23,9 +23,8 @@
 .aic {
   align-items: center;
 }
-.App {
-  height: 100vh;
-  background-color: #5a5e75;
+html {
+  background-color: #5a5e75b5;
 }
 
 .container {
@@ -43,6 +42,7 @@
   grid-template-columns: 200px 1fr;
   grid-template-rows: repeat(4, 50px);
   margin-bottom: 10px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
 .header {
@@ -96,13 +96,9 @@ label {
   border-radius: 50%;
   justify-self: center;
   grid-column: 2;
-
 }
 
-
-
 .icon-plus {
-  
   background: linear-gradient(to right, #ff5e0079, #ed7e2c);
   color: #fff;
   padding: 15px;
@@ -123,14 +119,22 @@ label {
   margin: 0 auto;
   justify-content: space-between;
   background-color: #1a1c35d2;
+  backdrop-filter: blur(9px);
   color: #efefef;
-  margin-bottom: 2px;
+  margin-bottom: 3px;
   padding: 15px;
   border-radius: 8px;
   font-size: 18px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
-    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  transition: 0.3s;
+  cursor: pointer;
+  border: 1.5px solid transparent;
+}
+
+.task-container:hover {
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  transform: scale(1.03);
+  border: 1.5px solid #ed7e2c;
+  margin-bottom: 6px;
 }
 
 .task-radio-container {
@@ -175,7 +179,6 @@ label {
 }
 
 .icon-delete:hover {
-  /* transform: scale(1.1); */
   border: 1px solid red;
 }
 
