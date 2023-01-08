@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { taskArr } from "../features/taskSlice";
 import { useState, useEffect } from "react";
 import Task from "../components/Task";
+import plus from "../images/plusIcon.png";
 
 const Main = () => {
   let tasks = useSelector(taskArr);
@@ -67,9 +68,8 @@ const Main = () => {
             value={taskDate}
             onChange={(c) => setTaskDate(c.target.value)}
           />
-
-          <button className="btn-add" type="submit">
-            Add Task
+          <button className="btn-submit" type="submit">
+            <img src={plus} className="icon-plus" alt="icon" />
           </button>
         </form>
       </div>

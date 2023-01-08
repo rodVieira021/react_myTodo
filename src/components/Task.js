@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { deleteTask } from "../features/taskSlice";
+import iconEdit from "../images/iconEdit.png";
+import iconDelete from "../images/iconDelete.png";
 
 const Task = ({
   task,
@@ -47,24 +49,24 @@ const Task = ({
                 Due in:{" "}
                 {Math.ceil((task.date - new Date()) / 1000 / 60 / 60 / 24)}{" "}
                 day(s) left
-                
-
-
               </p>
             </div>
           }
         </div>
       </div>
       <div className="btn-task-container">
-        <button className="btn-edit" onClick={() => editTaskNew()}>
-          Edit
-        </button>
-        <button
-          className="btn-delete"
+        <img
+          src={iconEdit}
+          className="icon-edit"
+          onClick={() => editTaskNew()}
+          alt="logo"
+        />
+        <img
+          src={iconDelete}
+          className="icon-delete"
           onClick={() => dispatch(deleteTask(task.id))}
-        >
-          Delete
-        </button>
+          alt="logo"
+        />
       </div>
     </div>
   );

@@ -25,7 +25,7 @@
 }
 .App {
   height: 100vh;
-  background-color: rgba(128, 128, 128, 0.13);
+  background-color: #5a5e75;
 }
 
 .container {
@@ -37,13 +37,9 @@
 .input-container {
   align-items: center;
   justify-items: start;
-  background-color: rgb(210, 224, 215);
-  background-image: url("./images/mainBcg.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-color: #1a1c35;
   padding: 100px 10px 20px 10px;
-  border-radius: 4px 4px 0 0;
+  border-radius: 6px 6px 0 0;
   grid-template-columns: 200px 1fr;
   grid-template-rows: repeat(4, 50px);
   margin-bottom: 10px;
@@ -52,15 +48,16 @@
 .header {
   font-size: 48px;
   padding: 30px 0 20px 0;
+  color: #efefef;
 }
 
 label {
-  color: #fff;
+  color: #efefef;
+  background: linear-gradient(to right, #ff5e0079, #ed7e2c);
   font-size: 18px;
-  backdrop-filter: blur(5px);
-  background-color: rgba(0, 0, 0, 0.204);
-  padding: 5px;
-  border-radius: 6px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: 800;
 }
 
 .input-title {
@@ -91,21 +88,32 @@ label {
   height: 35px;
 }
 
-.btn-add {
+.btn-submit {
   border: none;
-  background-color: rgba(2, 112, 190, 0.874);
-  color: #fff;
-  padding: 14px 30px;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-left: 3px;
-  justify-self: end;
-  margin-right: 50%;
+  background-color: transparent;
+  margin-top: 15px;
+  margin-right: 10%;
+  border-radius: 50%;
+  justify-self: center;
   grid-column: 2;
+
 }
 
-.btn-add:hover {
-  background-color: rgb(2, 112, 190);
+
+
+.icon-plus {
+  
+  background: linear-gradient(to right, #ff5e0079, #ed7e2c);
+  color: #fff;
+  padding: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.icon-plus:hover {
+  background-color: #ed7e2c;
+  transform: scale(1.1);
 }
 
 /* TASKS */
@@ -114,12 +122,15 @@ label {
   max-width: 1200px;
   margin: 0 auto;
   justify-content: space-between;
-  background-color: rgb(52, 82, 104);
-  color: #fff;
+  background-color: #1a1c35d2;
+  color: #efefef;
   margin-bottom: 2px;
-  padding: 5px;
-
+  padding: 15px;
+  border-radius: 8px;
   font-size: 18px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 .task-radio-container {
@@ -134,35 +145,38 @@ label {
   align-items: end;
 }
 
-.btn-delete {
-  border: none;
+.icon-edit {
   margin-left: 5px;
-  color: #fff;
-  padding: 10px 20px;
+  padding: 5px 20px;
   border-radius: 4px;
   cursor: pointer;
-  background-color: rgba(242, 94, 78, 0.869);
+  background-color: rgba(255, 255, 255, 0.086);
+  grid-row: -2;
+  border: 1px solid transparent;
+  transition: 0.5s;
+
+  border: 1px solid transparent;
+}
+
+.icon-edit:hover {
+  border: 1px solid rgb(103, 230, 103);
+}
+
+.icon-delete {
+  margin-left: 5px;
+  padding: 5px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.086);
   align-self: flex-end;
   grid-row: 3;
+  border: 1px solid transparent;
+  transition: 0.5s;
 }
 
-.btn-delete:hover {
-  background-color: rgb(242, 95, 78);
-}
-
-.btn-edit {
-  border: none;
-  margin-left: 5px;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 4px;
-  cursor: pointer;
-  background-color: rgba(34, 202, 143, 0.833);
-  grid-row: -2;
-}
-
-.btn-edit:hover {
-  background-color: rgb(34, 202, 143);
+.icon-delete:hover {
+  /* transform: scale(1.1); */
+  border: 1px solid red;
 }
 
 .check {
