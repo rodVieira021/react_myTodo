@@ -43,6 +43,7 @@ html {
   grid-template-rows: repeat(4, 50px);
   margin-bottom: 10px;
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  min-height: 230px;
 }
 
 .header {
@@ -247,7 +248,6 @@ label {
 @media (max-width: 990px) {
   .input-container {
     padding: 10px;
-
     grid-template-columns: 200px 1fr;
     grid-template-rows: repeat(4, 50px);
   }
@@ -293,7 +293,6 @@ label {
 @media (max-width: 770px) {
   .input-container {
     padding: 10px;
-
     grid-template-columns: 150px 1fr;
     grid-template-rows: repeat(4, 50px);
   }

@@ -5,6 +5,7 @@ import { taskArr } from "../features/taskSlice";
 import { useState, useEffect } from "react";
 import Task from "../components/Task";
 import plus from "../images/plusIcon.png";
+import { format } from "date-fns";
 
 const Main = () => {
   let tasks = useSelector(taskArr);
@@ -15,20 +16,29 @@ const Main = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
+    console.log("task date: ", format(new Date(taskDate), "dd/mm/yyyy"));
+    console.log("todays date: ", format(new Date(), "dd/mm/yyyy"));
+    console.log(new Date() - new Date(taskDate));
+    if (
+      format(new Date(taskDate), "dd/mm/yyyy") >=
+      format(new Date(), "dd/mm/yyyy")
+    ) {
+      const taskObj = {
+        id: tasks.length + 1,
+        title: taskTitle.toUpperCase(),
+        task: taskInput,
+        date: taskDate,
+      };
 
-    let dueDate = new Date(taskDate);
-
-    const taskObj = {
-      id: tasks.length + 1,
-      title: taskTitle.toUpperCase(),
-      task: taskInput,
-      date: dueDate,
-    };
-    dispatch(addTask(taskObj));
-    localStorage.setItem("tasks", JSON.stringify([...tasks, taskObj]));
-    setTaskTitle("");
-    setTaskInput("");
-    setTaskDate("");
+      dispatch(addTask(taskObj));
+      localStorage.setItem("tasks", JSON.stringify([...tasks, taskObj]));
+      setTaskTitle("");
+      setTaskInput("");
+      setTaskDate("");
+    } else {
+      setTaskDate("");
+      alert("Please add a date in the future!");
+    }
   };
 
   useEffect(() => {
@@ -47,6 +57,7 @@ const Main = () => {
         >
           <label>Task title:</label>
           <input
+            required
             className="input-title"
             type="text"
             value={taskTitle}
@@ -55,6 +66,7 @@ const Main = () => {
 
           <label> Task description:</label>
           <input
+            required
             className="input-task"
             type="text"
             value={taskInput}
@@ -63,6 +75,7 @@ const Main = () => {
 
           <label> Deadline: </label>
           <input
+            required
             className="input-date"
             type="date"
             value={taskDate}
@@ -76,6 +89,7 @@ const Main = () => {
       {tasks.map((task, index) => {
         return (
           <Task
+            key={index}
             tasks={tasks}
             task={task}
             index={index}
