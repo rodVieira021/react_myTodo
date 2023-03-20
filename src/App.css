@@ -23,8 +23,9 @@
 .aic {
   align-items: center;
 }
-html {
-  background-color: #5a5e75b5;
+
+body {
+  background-color: #1f2937;
 }
 
 .container {
@@ -37,6 +38,10 @@ html {
   align-items: center;
   justify-items: start;
   background-color: #1a1c35;
+  background-image: url("./images/landscape-bgc.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   padding: 100px 10px 20px 10px;
   border-radius: 6px 6px 0 0;
   grid-template-columns: 200px 1fr;
@@ -54,7 +59,8 @@ html {
 
 label {
   color: #efefef;
-  background: linear-gradient(to right, #ff5e0079, #ed7e2c);
+  backdrop-filter: blur(100px);
+  background-color: #00000059;
   font-size: 18px;
   padding: 5px 10px;
   border-radius: 20px;
@@ -119,8 +125,11 @@ label {
   max-width: 1200px;
   margin: 0 auto;
   justify-content: space-between;
-  background-color: #1a1c35d2;
-  backdrop-filter: blur(9px);
+  background-color: #1a1c352c;
+  background-image: url("./images/landscape-bgc.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
   color: #efefef;
   margin-bottom: 3px;
   padding: 15px;
@@ -375,7 +384,7 @@ label {
   }
 
   label {
-    font-size: 10px;
+    font-size: 9px;
   }
 
   .btn-add {
