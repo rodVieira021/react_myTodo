@@ -36,7 +36,7 @@ body {
 
 .input-container {
   align-items: center;
-  justify-items: start;
+  justify-items: center;
   background-color: #1a1c35;
   background-image: url("./images/landscape-bgc.jpg");
   background-repeat: no-repeat;
@@ -44,8 +44,8 @@ body {
   background-position: center;
   padding: 100px 10px 20px 10px;
   border-radius: 6px 6px 0 0;
-  grid-template-columns: 200px 1fr;
-  grid-template-rows: repeat(4, 50px);
+  grid-template-columns: 100px 1fr;
+  grid-template-rows: repeat(3, 50px);
   margin-bottom: 10px;
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
   min-height: 230px;
@@ -65,6 +65,7 @@ label {
   padding: 5px 10px;
   border-radius: 20px;
   font-weight: 800;
+  justify-self: start;
 }
 
 .input-title {
@@ -81,6 +82,7 @@ label {
   height: 45px;
   font-size: 16px;
   border-radius: 4px;
+  max-width: 90%;
 }
 .input-task:focus,
 .input-title:focus {
@@ -99,7 +101,6 @@ label {
   border: none;
   background-color: transparent;
   margin-top: 15px;
-  margin-right: 10%;
   border-radius: 50%;
   justify-self: center;
   grid-column: 2;
@@ -209,219 +210,160 @@ label {
 
 /* MEDIAS */
 
-@media (max-width: 1250px) {
+@media (min-width: 320px) and (max-width: 480px) {
+  .header {
+    font-size: 24px;
+  }
+
+  label {
+    font-size: 10px;
+  }
+
   .input-container {
+    grid-template-columns: 60px 1fr;
+    margin: 0 10px 10px 10px;
+    padding: 10px 10px 20px 10px;
+  }
+
+  .input-title,
+  .input-task,
+  .input-date {
+    height: 30px;
+  }
+
+  .icon-plus {
     padding: 10px;
-    grid-template-columns: 200px 1fr;
-    grid-template-rows: repeat(4, 50px);
-  }
-
-  label {
-    font-size: 16px;
-  }
-
-  .btn-add {
-    padding: 14px 30px;
-    font-size: 16px;
-  }
-
-  .header {
-    font-size: 34px;
-  }
-
-  .btn-add {
-    padding: 10px 20px;
-    font-size: 16px;
   }
 
   .task-container {
-    font-size: 16px;
-  }
-
-  .task-container {
-    font-size: 16px;
-  }
-  .btn-edit {
-    grid-row: 2;
-    grid-column: 2;
-    justify-self: start;
-  }
-
-  .btn-delete {
-    grid-row: 3;
-    grid-column: 2;
-    margin-top: 5px;
-  }
-}
-
-@media (max-width: 990px) {
-  .input-container {
-    padding: 10px;
-    grid-template-columns: 200px 1fr;
-    grid-template-rows: repeat(4, 50px);
-  }
-
-  label {
-    font-size: 16px;
-  }
-
-  .btn-add {
-    padding: 14px 30px;
-    font-size: 16px;
-  }
-
-  .header {
-    font-size: 34px;
-  }
-
-  .btn-add {
-    padding: 10px 20px;
-    font-size: 16px;
-  }
-
-  .task-container {
-    font-size: 16px;
-  }
-
-  .task-container {
-    font-size: 16px;
-  }
-  .btn-edit {
-    grid-row: 2;
-    grid-column: 2;
-    justify-self: start;
-  }
-
-  .btn-delete {
-    grid-row: 3;
-    grid-column: 2;
-    margin-top: 5px;
-  }
-}
-
-@media (max-width: 770px) {
-  .input-container {
-    padding: 10px;
-    grid-template-columns: 150px 1fr;
-    grid-template-rows: repeat(4, 50px);
-  }
-
-  label {
-    font-size: 16px;
-  }
-
-  .btn-add {
-    padding: 14px 30px;
-    font-size: 16px;
-  }
-
-  .header {
-    font-size: 28px;
-  }
-
-  .btn-add {
-    padding: 10px 20px;
-    font-size: 16px;
-  }
-
-  .task-container {
-    font-size: 16px;
-  }
-  .btn-edit {
-    grid-row: 2;
-    grid-column: 2;
-    justify-self: start;
-  }
-
-  .btn-delete {
-    grid-row: 3;
-    grid-column: 2;
-    margin-top: 5px;
-  }
-}
-
-@media (max-width: 570px) {
-  .input-container {
-    padding: 0;
-    grid-template-columns: 120px 1fr;
-    grid-template-rows: repeat(4, 50px);
-  }
-
-  label {
-    font-size: 14px;
-  }
-
-  .btn-add {
-    padding: 7px 16px;
-    font-size: 16px;
-  }
-
-  .header {
-    font-size: 28px;
-  }
-
-  .task-container {
-    font-size: 16px;
-  }
-  .btn-edit {
-    grid-row: 2;
-    grid-column: 2;
-    justify-self: start;
-  }
-
-  .btn-delete {
-    grid-row: 3;
-    grid-column: 2;
-    margin-top: 5px;
-  }
-}
-
-@media (max-width: 445px) {
-  .input-container {
     padding: 5px;
-    grid-template-columns: 100px 1fr;
-    grid-template-rows: repeat(4, 50px);
+    font-size: 12px;
+    margin: 0 10px 3px 10px;
+  }
+
+  .t-title {
+    font-size: 14px;
+  }
+
+  .t-task,
+  .t-date {
+    margin-bottom: 10px;
+  }
+
+  .icon-edit,
+  .icon-delete {
+    padding: 5px 10px;
+    width: 40px;
+  }
+
+  .icon-plus:hover {
+    transform: scale(1.05);
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .header {
+    font-size: 26px;
   }
 
   label {
-    font-size: 9px;
+    font-size: 12px;
   }
 
-  .btn-add {
-    padding: 5px 10px;
-    font-size: 14px;
+  .input-container {
+    grid-template-columns: 60px 1fr;
+    margin: 0 10px 10px 10px;
+    padding: 50px 10px 20px 10px;
   }
 
-  .header {
-    font-size: 28px;
+  .input-title,
+  .input-task,
+  .input-date {
+    height: 30px;
   }
 
-  .App {
-    overflow: hidden;
+  .icon-plus {
+    padding: 10px;
   }
 
   .task-container {
+    padding: 5px;
+    font-size: 14px;
+    margin: 0 10px 3px 10px;
+  }
+
+  .t-title {
+    font-size: 16px;
+  }
+
+  .t-task,
+  .t-date {
+    margin-bottom: 10px;
+  }
+
+  .icon-edit,
+  .icon-delete {
+    padding: 5px 10px;
+    width: 45px;
+  }
+
+  .icon-plus:hover {
+    transform: scale(1.05);
+  }
+}
+
+@media (min-width: 769px) and (max-width: 990px) {
+  .header {
+    font-size: 32px;
+  }
+
+  label {
     font-size: 14px;
   }
-  .btn-edit {
-    grid-row: 2;
-    grid-column: 2;
-    justify-self: start;
-    padding: 8px 16px;
+
+  .input-container {
+    grid-template-columns: 60px 1fr;
+    margin: 0 10px 10px 10px;
+    padding: 50px 10px 20px 10px;
   }
 
-  .btn-delete {
-    grid-row: 3;
-    grid-column: 2;
-    margin-top: 5px;
-    padding: 8px 16px;
+  .icon-plus {
+    padding: 10px;
   }
 
-  .t-title,
-  .t-task {
-    margin-bottom: 5px;
+  .task-container {
+    padding: 5px;
+    font-size: 16px;
+    margin: 0 10px 3px 10px;
   }
+
   .t-title {
-    font-size: 20px;
+    font-size: 18px;
+  }
+
+  .t-task,
+  .t-date {
+    margin-bottom: 10px;
+  }
+
+  .icon-plus:hover {
+    transform: scale(1.05);
+  }
+}
+
+@media (min-width: 991px) and (max-width: 1250px) {
+  .input-container {
+    grid-template-columns: 60px 1fr;
+    margin: 0 10px 10px 10px;
+    padding: 50px 10px 20px 10px;
+  }
+
+  .task-container {
+    padding: 5px;
+    margin: 0 10px 3px 10px;
+  }
+
+  .icon-plus:hover {
+    transform: scale(1.05);
   }
 }

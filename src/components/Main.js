@@ -55,7 +55,7 @@ const Main = () => {
           className="input-container grid"
           onSubmit={(e) => submitHandler(e)}
         >
-          <label>Task title:</label>
+          <label>Title:</label>
           <input
             required
             className="input-title"
@@ -63,8 +63,9 @@ const Main = () => {
             value={taskTitle}
             onChange={(a) => setTaskTitle(a.target.value)}
           />
+          
 
-          <label> Task description:</label>
+          <label> Task :</label>
           <input
             required
             className="input-task"
