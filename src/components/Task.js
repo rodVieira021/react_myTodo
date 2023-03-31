@@ -4,14 +4,7 @@ import { deleteTask } from "../features/taskSlice";
 import iconEdit from "../images/iconEdit.png";
 import iconDelete from "../images/iconDelete.png";
 
-const Task = ({
-  task,
-  index,
-  setTaskTitle,
-  setTaskInput,
-  setTaskDate,
-  taskDate,
-}) => {
+const Task = ({ task, index, setTaskTitle, setTaskInput, setTaskDate }) => {
   const dispatch = useDispatch();
   const [checkbox, setCheckBox] = useState(false);
 
@@ -43,11 +36,7 @@ const Task = ({
               <h2 className="t-title">{task.title}</h2>
               <p className="t-task">{task.task} </p>
               <p className="t-date">
-                Due in :{" "}
-                {Math.ceil(
-                  (new Date(task.date) - new Date()) / 1000 / 60 / 60 / 24
-                )}{" "}
-                day(s)
+                Due on: <span>{task.date}</span>
               </p>
             </div>
           }

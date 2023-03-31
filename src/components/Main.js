@@ -16,9 +16,9 @@ const Main = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log("task date: ", format(new Date(taskDate), "dd/mm/yyyy"));
-    console.log("todays date: ", format(new Date(), "dd/mm/yyyy"));
-    console.log(new Date() - new Date(taskDate));
+    // console.log("task date: ", format(new Date(taskDate), "dd/mm/yyyy"));
+    // console.log("todays date: ", format(new Date(), "dd/mm/yyyy"));
+    // console.log(new Date() - new Date(taskDate));
     if (
       format(new Date(taskDate), "dd/mm/yyyy") >=
       format(new Date(), "dd/mm/yyyy")
